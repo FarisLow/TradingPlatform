@@ -1,6 +1,6 @@
 package org.project.controller;
 
-import org.project.service.WebClientService;
+import org.project.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class LandingController {
 
     @Autowired
-    private WebClientService webClientService;
+    private DataService dataService;
 
     @GetMapping("/")
     public String index() {
-        return webClientService.getApiUrl();
+        System.out.println(dataService.fetchCurrencyData());
+        return "Hello World";
     }
 
 
