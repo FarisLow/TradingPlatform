@@ -1,8 +1,12 @@
 package org.project.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+
+import java.io.Serializable;
 import java.util.Map;
 
-public class CurrencyResponse {
+public class CurrencyResponse implements Serializable {
 
     private Map<String, Currencies> data;
 
